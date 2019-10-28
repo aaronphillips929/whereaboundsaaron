@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+  <title>whereabounds</title>
+</head>
+
+<body>
+    <header>
+        <!-- Header -->
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"><h1>whereabounds</h1></a>
+        </nav>
+    </header>
+    <!-- carousel -->
+    <div class="bd-example">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+              </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/images/paris.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2 class="city-carousel" city-name="Paris">Explore Paris</h2>
+                    <p>Paris offers monument-lined boulevards, museums, classical bistros, boutiques and creative wine bars.</p>
+                  </div>
+            </div>
+            <div class="carousel-item">
+                  <img src="assets/images/hk.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2 class="city-carousel" city-name="Hong Kong">Explore Hong Kong</h2>
+                    <p>Hong Kong welcomes with an iconic skyline, a legendary kitchen and colorful traditions that thrive.</p>
+                  </div>
+            </div>
+            <div class="carousel-item">
+                  <img src="assets/images/nyc.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2 class="city-carousel" city-name="New York City">Explore New York City</h2>
+                    <p>Epicenter of the arts. Architectural darling. Dining and shopping capital. Trendsetter. New York wears many crowns, and waits for you!</p>
+                  </div>
+                </div>
+            <div class="carousel-item">
+                    <img src="assets/images/tokyo.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="city-carousel" city-name="Tokyo">Explore Tokyo</h2>
+                        <p>Yoking past and future, Tokyo dazzles with its traditional culture and passion for everything new.</p>
+                    </div>
+                </div>
+            <div class="carousel-item">
+                    <img src="assets/images/sydney.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="city-carousel" city-name="Sydney">Explore Sydney</h2>
+                        <p>Sydney, spectacularly draped around its glorious harbour and beaches, has visual wow factor like few other cities.</p>
+                    </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+    </div>
+    </div>
+
+    
+    <!-- .container -->
+    <section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <form id="search-bar-form" class="form-inline">      
+                    <input id="search-bar" class="form-control mc-md-2" type="search" placeholder="Enter a City" aria-label="Search">
+                    <button id="search-button" class="btn btn-outline-primary my-2 my-md-0" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <!-- <div class="container"> -->
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                        <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Pick a Category
+                                </button>
+                                <div class="dropdown-menu" id="dropdown-list" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#" value="aquarium">Aquarium</a>
+                                    <a class="dropdown-item" href="#" value="bakery">Bakery</a>
+                                    <a class="dropdown-item" href="#" value="bar">Bar</a>
+                                    <a class="dropdown-item" href="#" value="cafe">Cafe</a>
+                                    <a class="dropdown-item" href="#" value="casino">Casino</a>
+                                    <a class="dropdown-item" href="#" value="embassy">Embassy</a>
+                                    <a class="dropdown-item" href="#" value="gym">Gym</a>
+                                    <a class="dropdown-item" href="#" value="lodging">Lodging</a>
+                                    <a class="dropdown-item" href="#" value="meal_deliver">Meal Delivery</a>
+                                    <a class="dropdown-item" href="#" value="movie_theater">Movie Theater</a>
+                                    <a class="dropdown-item" href="#" value="museum">Museum</a>
+                                    <a class="dropdown-item" href="#" value="park">Park</a>
+                                    <a class="dropdown-item" href="#" value="restaurant">Restaurant</a>
+                                    <a class="dropdown-item" href="#" value="shopping_mall">Shopping Mall</a>
+                                    <a class="dropdown-item" href="#" value="transit_station">Transit Station</a>
+                                    <a class="dropdown-item" href="#" value="zoo">Zoo</a>
+                                </div>
+                            </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </section>
+        <!-- map display -->
+        
+        <div class ="container">
+        
+            <div class="container-fluid-nav text-center" id="city-name-container">
+                <span id="city-name"></span>
+             </div>
+             <div class="row" id="weather">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div id="weather-display" class="card">
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+            </div>
+
+             <div class="row">
+            
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                
+                <div id="map-display" class="card">
+                    <div id="map"></div>
+                </div>
+            <div class="col-md-2"></div>
+            
+            </div>
+        </div>   
+        <!-- places list -->
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="card card-header">Places</div>
+                    <div id="place-list" class="card text-left">
+                    </div>
+                
+            <div class="col-md-2"></div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+            <div class="container text-center">
+              <small>Copyright &copy;2019 whereabounds</small>
+            </div>
+    </footer>
+
+    <script src="assets/javascript/map.js"></script>
+    <script src="assets/javascript/places.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8bCpKsrRnSIoQbQkR1JI9och8cHbiY2A&callback=initMap">
+    </script>
+    <script type="text/javascript" src="assets/javascript/weather.js"></script>
+</body>
+
+</html>
